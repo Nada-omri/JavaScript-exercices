@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice4</title>
+</head>
+<body>
+    <h1>failed student liste </h1>
+    
+</body>
+<script>
+    const etudiants = [
+{ name : "sarah" , note : undefined },
+{ name : "monya" , note : 7 },
+{ name : "carlos" , note : 13 },
+{ name : "fadhel" , note : 18 },
+]
+ let array =etudiants.filter(num =>{
+    if(num.note !== undefined){
+        return{name:num.name,note:num.note};
+    }
+
+});
+array.sort((a,b)=>{
+    return (b.note-a.note);
+});
+
+ let sumnote=array.reduce((sum,n)=>{
+    return(sum+=n.note);
+    },0);
+let output =array.map(e=>{
+    if(e.note>=sumnote/array.length){
+        return{name:e.name , note:e.note, mention:"bien"};
+    } 
+    else if (e.note < sumnote/array.length){
+        return{name:e.name , note:e.note, mention:"passable"};
+    }
+
+});
+  
+console.log(sumnote);
+console.log(output);
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice1</title>
+</head>
+<body>
+    
+</body>
+<script>
+    console.log("task");
+const persons = [
+
+{ name : "MONCEF" , age: 13} ,
+{ name : "BAHIJA" , age: 23} ,
+{ name : "ALA" , age: 18} ,
+
+];
+const array=persons.map(person=>{
+    if (person.age>=18){
+        return{ name:person.name ,age:person.age,status: "majeur"};
+
+    }
+    else {
+        return{ name:person.name ,age:person.age,status: "mineur"};
+
+    }
+});
+console.log(array);
+
+
+</script>
+</html>
